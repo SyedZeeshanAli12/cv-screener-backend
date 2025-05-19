@@ -1,6 +1,7 @@
 require('dotenv').config(); // VERY important
 const express = require('express');
 const resumeRoutes = require('./routes/resumeRoutes');
+const aiCoachRoutes = require("./routes/aiCoachRoutes");
 const cors = require('cors');
 
 const app = express();
@@ -9,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/resumes', resumeRoutes);
+app.use("/api/ai", aiCoachRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

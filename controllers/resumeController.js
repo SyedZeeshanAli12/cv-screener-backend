@@ -38,7 +38,8 @@ ${resumeText}
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel
     
-    ({ model: "models/gemini-2.0-flash",temperature: 0,
+    ({ model: "models/gemini-2.0-flash",
+      temperature: 0,
       topP: 0.8,     
       topK: 40  
     });
